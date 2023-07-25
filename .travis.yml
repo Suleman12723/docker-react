@@ -6,7 +6,7 @@ before_install:
   - docker build -t suleman/docker-react -f Dockerfile.dev .
 
 script:
-  - docker run suleman/docker-react npm run test -- --coverage
-  
+  - docker run -e CI=true suleman/docker-react npm run test
+
   
 
